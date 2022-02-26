@@ -33,12 +33,13 @@ int main()
     for(int i=0;i<m;i++){
         cin>>b[i];
     }
-    if(n<m){
+    if(n<m | m==0){
         cout<<"No"<<endl;
+        return 0;
     }
     else{
         for(int i=0;i<m;i++){
-            f=NULL;
+            f=-100;
             f=binarySearch(a,b[i],0,n-1);
             if(f==-1){
                 cout<<"No"<<endl;
